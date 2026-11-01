@@ -1,31 +1,34 @@
-\begin{titlepage}
-
-  \begin{center}
-    \singlespacing
-    \MakeUppercase{Vilniaus jėzuitų gimnazija} \\
-    \vspace{1.5cm}
-    \MakeUppercase{Informacinės technologijos} \\
-    \MakeUppercase{IV gim. kl.} \\
-    \vspace{2.5cm}
-
-    % {\large Department} \\
-    {\large Brandos darbas} \\
-    {\singlespacing \Large \textbf{Brandos darbo tema}} \\
-  \end{center}
-  \vspace{5.7cm}
-  \begin{flushright}
-    \singlespacing
-    \begin{tabular}[t]{l l}
-      & Atliko: IV gim. kl. mokinys(-ė) \\
-      & \vspace{1cm} Vardenis Pavardenis \hfill \signatureplace \\
-      & Darbo vadovas: Informacinių technologijų mokytojas\\
-      & Gvidas Tupinis \hfill \signatureplace
-    \end{tabular}
-  \end{flushright}
-  \vspace{3.2cm}
-  \begin{center}
-    {\singlespacing Vilnius} \\
-    {\singlespacing 2023}
-  \end{center}
-  \vfill
-\end{titlepage}
+% Titulinis įskaičiuojamas kaip 1 puslapis, tačiau jo numeris nerodomas.
+\thispagestyle{empty}
+\begin{center}
+\MakeUppercase{\Mokykla}\par
+\vspace{1.3cm}
+\Dalykas\par
+\Klase\par
+\vspace{2.2cm}
+{\fontsize{14}{17}\selectfont\bfseries\TemaLT\par}
+\vspace{0.4cm}
+{\itshape\TemaEN\par}
+\vspace{1cm}
+Brandos darbo aprašas\par
+Produkto kūrimas\par
+\MoksloMetai\ mokslo metai\par
+\end{center}
+\vfill
+\begin{flushright}
+\begin{minipage}{0.64\textwidth}
+\raggedright
+\textbf{Darbą atliko}\par
+\Autorius\par
+\medskip
+\textbf{Darbo vadovas}\par
+\Vadovas\par
+\VadovoKvalifikacija\par
+\ifKonsultantas
+\medskip\textbf{Konsultantas}\par\Konsultantas\par
+\fi
+\end{minipage}
+\end{flushright}
+\vfill
+\begin{center}\Miestas, \PateikimoMetai\end{center}
+\clearpage

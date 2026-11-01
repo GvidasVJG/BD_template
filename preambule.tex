@@ -1,0 +1,87 @@
+\usepackage{iftex}
+\ifPDFTeX
+  \PackageError{Brandos darbas}{Pasirinkite XeLaTeX}{Siam sablonui reikia XeLaTeX ir Biber.}
+\fi
+\usepackage{fontspec}
+\IfFontExistsTF{Times New Roman}{
+  \setmainfont{Times New Roman}
+}{
+  % Overleaf arba Linux aplinkai: keturi teisėtai turimi TNR failai fonts/.
+  \IfFileExists{fonts/times.ttf}{
+    \setmainfont{times.ttf}[Path=fonts/,BoldFont=timesbd.ttf,
+      ItalicFont=timesi.ttf,BoldItalicFont=timesbi.ttf]
+  }{
+    \setmainfont{TeX Gyre Termes}
+    \PackageWarningNoLine{Brandos darbas}{Times New Roman nerastas.
+      Naudojamas TeX Gyre Termes. Pries pateikima idiekite Times New Roman}
+  }
+}
+\setmonofont{lmmono10-regular.otf}
+\usepackage[english,lithuanian]{babel}
+\usepackage[left=3cm,right=1cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{indentfirst}
+\setlength{\parindent}{15mm}
+\setlength{\parskip}{0pt}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{array,tabularx,longtable,booktabs}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\renewcommand{\arraystretch}{1.18}
+\usepackage{enumitem}
+\setlist{topsep=4pt,itemsep=2pt,parsep=0pt}
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\fontsize{14}{17}\selectfont\bfseries}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\normalfont\fontsize{14}{17}\selectfont\bfseries}{\thesubsection.}{0.6em}{}
+\titleformat{\subsubsection}{\normalfont\fontsize{14}{17}\selectfont\bfseries}{\thesubsubsection.}{0.6em}{}
+\titlespacing*{\section}{0pt}{14pt}{10pt}
+\titlespacing*{\subsection}{0pt}{12pt}{6pt}
+\setcounter{tocdepth}{2}
+\usepackage{xcolor}
+\definecolor{gairiuSpalva}{HTML}{545454}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\small,breaklines=true,columns=fullflexible,
+  keepspaces=true,showstringspaces=false,numbers=left,numberstyle=\tiny,
+  numbersep=8pt,frame=single,captionpos=b,tabsize=4,
+  literate={ą}{{ą}}1 {č}{{č}}1 {ę}{{ę}}1 {ė}{{ė}}1 {į}{{į}}1
+    {š}{{š}}1 {ų}{{ų}}1 {ū}{{ū}}1 {ž}{{ž}}1
+    {Ą}{{Ą}}1 {Č}{{Č}}1 {Ę}{{Ę}}1 {Ė}{{Ė}}1 {Į}{{Į}}1
+    {Š}{{Š}}1 {Ų}{{Ų}}1 {Ū}{{Ū}}1 {Ž}{{Ž}}1}
+\renewcommand{\lstlistingname}{Kodo fragmentas}
+\usepackage{caption}
+\captionsetup{font=normalsize,labelfont=bf}
+\addto\captionslithuanian{%
+  \renewcommand{\contentsname}{Turinys}%
+  \renewcommand{\figurename}{Paveikslas}%
+  \renewcommand{\tablename}{Lentelė}%
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[R]{\thepage}\renewcommand{\headrulewidth}{0pt}}
+\usepackage{csquotes}
+\DeclareQuoteStyle{lithuanian}{„}{“}{‚}{‘}
+\setquotestyle{lithuanian}
+\usepackage[backend=biber,style=numeric,sorting=nyt,sortlocale=lt_LT,
+  giveninits=true,maxbibnames=99,date=iso,urldate=iso,seconds=true]{biblatex}
+\addbibresource{sources.bib}
+\usepackage{xurl}
+\usepackage[unicode,hidelinks]{hyperref}
+\hypersetup{pdftitle={Brandos darbo aprašo šablonas 2026-2027},
+  pdfsubject={Produkto kūrimas},pdfauthor={}}
+\urlstyle{same}
+\emergencystretch=2em
+\widowpenalty=10000
+\clubpenalty=10000
+\raggedbottom
+
+\newcommand{\gaires}[1]{\ifGaires\par\begingroup\color{gairiuSpalva}\itshape#1\par\endgroup\medskip\fi}
+\newcommand{\pildyti}[1]{\textit{[#1]}}
+\newcommand{\skyrius}[1]{\clearpage\section{#1}}
+\newcommand{\neskyrius}[1]{\clearpage\phantomsection\section*{#1}\addcontentsline{toc}{section}{#1}}
+\newcommand{\saltinis}[1]{\par\smallskip\noindent\textit{Šaltinis: #1.}}
+\newcounter{priedas}
+\newcommand{\priedas}[1]{\clearpage\refstepcounter{priedas}\section*{\thepriedas\ priedas. #1}\addcontentsline{toc}{subsection}{\thepriedas\ priedas. #1}}

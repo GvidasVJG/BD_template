@@ -1,0 +1,4 @@
+Čia laikykite savo iliustracijas (PDF, PNG arba JPG).
+Failų pavadinimams patogu naudoti lotyniškas raides be tarpų.
+Pavyzdys tekste: \includegraphics[width=0.85\textwidth]{media/schema.pdf}
+Paveikslą įvardykite, nurodykite šaltinį ir aptarkite tekste.

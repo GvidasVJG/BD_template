@@ -1,0 +1,82 @@
+% Priedų pavadinimas pridedamas prie pirmo priedo, be tuščio skiriamojo puslapio.
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Priedai}
+\priedas{Darbo planas ir jo pakeitimai}\label{app:planas}
+\gaires{Tai siūloma darbo priemonė. Pildykite nuo projekto pradžios ir
+išsaugokite ankstesnius susitarimus. Mokyklos nustatytos oficialios formos,
+jei jos taikomos, pildomos atskirai.}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{2.9cm}>{\raggedright\arraybackslash}p{3.9cm}>{\raggedright\arraybackslash}p{3.9cm}>{\raggedright\arraybackslash}p{4.9cm}@{}}
+\caption{Darbo planas}\label{tab:planas}\\
+\toprule
+Etapas & Planuotas terminas ir rezultatas & Faktinė data ir rezultatas & Pakeitimas, priežastis, aptarimas \\
+\midrule\endfirsthead
+\toprule
+Etapas & Planuotas terminas ir rezultatas & Faktinė data ir rezultatas & Pakeitimas, priežastis, aptarimas \\
+\midrule\endhead
+Poreikio analizė & \pildyti{Data, rezultatas} & \pildyti{Data, įrodymas} & \pildyti{Įrašas} \\
+Projektavimas & \pildyti{Data, rezultatas} & \pildyti{Data, įrodymas} & \pildyti{Įrašas} \\
+Prototipo kūrimas & \pildyti{Data, rezultatas} & \pildyti{Data, įrodymas} & \pildyti{Įrašas} \\
+Patikra ir tobulinimas & \pildyti{Data, rezultatas} & \pildyti{Data, įrodymas} & \pildyti{Įrašas} \\
+Aprašo rengimas & \pildyti{Data, rezultatas} & \pildyti{Data, įrodymas} & \pildyti{Įrašas} \\
+Pristatymo rengimas & \pildyti{Data, rezultatas} & \pildyti{Data, įrodymas} & \pildyti{Įrašas} \\
+\bottomrule
+\end{longtable}
+\noindent\textbf{Su vadovu suderinti terminai}\par
+Aprašo projektas autentiškumo patikrai: \pildyti{data}.\par
+Galutinio produkto ir aprašo pateikimas: \pildyti{data}.\par
+Pristatymas: \pildyti{data, vieta arba būdas}.
+
+\priedas{Proceso ir konsultacijų žurnalas}\label{app:zurnalas}
+\gaires{Kiekvienam reikšmingam etapui kopijuokite žemiau pateiktą įrašo formą.
+Pridėkite nuorodą į tikrą įrodymą ir trumpą jo paaiškinimą. Vien darbų
+saugyklos nuoroda nepakeičia proceso analizės.}
+\noindent\textbf{Įrašas E1}\par
+Data ir etapas: \pildyti{...}\par
+Siektas rezultatas ir atliktas darbas: \pildyti{...}\par
+Įrodymas (failas, versija, nuotrauka): \pildyti{...}\par
+Klausimas vadovui ir gauta pastaba: \pildyti{...}\par
+Priimtas sprendimas ir kitas žingsnis: \pildyti{...}\par
+Trumpas įsivertinimas: \pildyti{kas pavyko, ką ir kaip tobulinti}.\par
+\medskip
+\noindent\textbf{Perimti komponentai ir pagalba}\par
+\pildyti{Komponentas ar pagalbos priemonė; autorius ar teikėjas; versija;
+nuoroda ir licencija; kur panaudota; ką pakeitėte ir kaip patikrinote.
+Jei naudotas DI, pridėkite užklausos ar darbo sesijos nuorodą / išrašą, kai
+to reikia pagal susitarimą su vadovu. Nerašykite, kad DI naudotas, jei jis nenaudotas.}
+
+\priedas{Išsamūs patikros duomenys}\label{app:testai}
+\gaires{Išsaugokite tikrus duomenis, taip pat nesėkmingus bandymus. Neskelbkite
+dalyvių vardų ar kitų nereikalingų asmens duomenų. Jei testų daug,
+pridėkite atskirą failą ir čia paaiškinkite jo struktūrą.}
+\noindent\textbf{Bandymas T1}\par
+Susijęs reikalavimas: \pildyti{R1}.\par
+Data, produkto versija, aplinka: \pildyti{...}\par
+Pradinė būsena, duomenys ir veiksmai: \pildyti{...}\par
+Laukiamas rezultatas ir priėmimo kriterijus: \pildyti{...}\par
+Gautas rezultatas ir įrodymo failas: \pildyti{...}\par
+Vertinimas ir paaiškinimas: \pildyti{...}\par
+Pataisa ir pakartotinis bandymas, jei reikėjo: \pildyti{...}.\par
+\medskip
+\pildyti{Pakartokite formą kitiems bandymams. Pridėkite matavimų lenteles,
+apklausos klausimus ar kitą naudotą instrumentą, jei jis buvo taikytas.}
+
+\priedas{Produkto pateikimas ir naudojimas}\label{app:produktas}
+\noindent\textbf{Produkto identifikacija}\par
+Pavadinimas ir galutinė versija: \pildyti{...}.\par
+Pateikiami failai ir jų paskirtis: \pildyti{...}.\par
+Saugykla / kopija / fizinio produkto vieta: \pildyti{...}.\par
+\gaires{Skaitmeniniam produktui nurodykite versijos žymą arba pakeitimo ID,
+priklausomybes ir paleidimo eigą. Fiziniam produktui -- surinkimo, veikimo ir
+saugos sąlygas. Prieigą prie pateikto produkto patikrinkite iš kitos paskyros
+ar įrenginio. Slaptažodžių ir API raktų apraše neturi būti.}
+\noindent\textbf{Naudojimo žingsniai}
+\begin{enumerate}
+\item \pildyti{Reikalinga įranga ar programinė aplinka ir pasirengimas.}
+\item \pildyti{Paleidimas arba surinkimas.}
+\item \pildyti{Pagrindinės funkcijos naudojimas ir laukiamas rezultatas.}
+\item \pildyti{Žinomi ribotumai, trikčių sprendimas ar saugus išjungimas.}
+\end{enumerate}
+\noindent\textbf{Demonstravimo planas}\par
+\pildyti{Kokį trumpą scenarijų parodysite pristatydami produktą?
+Kokią kopiją, vaizdo įrašą ar kitą atsarginį įrodymą turėsite sutrikus įrangai?}

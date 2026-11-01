@@ -1,0 +1,6 @@
+Šriftai neplatinami su šablonu.
+Jei aplinkoje nėra Times New Roman, čia galima įkelti teisėtai turimus failus:
+times.ttf, timesbd.ttf, timesi.ttf, timesbi.ttf.
+Jei šriftas įdiegtas sistemoje, šio aplanko pildyti nereikia.
+Be Times New Roman šablonas kompiliuojamas su TeX Gyre Termes ir pateikia įspėjimą.
+Galutiniam pateikimui naudokite Times New Roman pagal NŠA maketo gaires.
